@@ -1,0 +1,12 @@
+<?php
+
+include "../config-db.php";
+
+$data = "INSERT INTO pasok(id_distributor, id_buku, jumlah, tanggal) VALUES (
+        '" . $_POST['id_distributor'] . "',
+        '" . $_POST['id_buku'] . "',
+        '" . $_POST['jumlah'] . "',
+        '" . $_POST['tanggal'] . "'
+    )";
+
+$database->query($data);
