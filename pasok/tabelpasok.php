@@ -23,7 +23,7 @@ $hasil = $database->query($tampilan);
     <div class="main-panel">
         <div class="content-wrapper">
 
-                <a href="from.php" class="btn btn-primary mt-3">Tambah Data</a>
+                <a href="createpasok.php" class="btn btn-primary mt-3">Tambah Data</a>
 
                 <!-- awal table -->
                 <table class="table mt-5 mb-5 text-center">

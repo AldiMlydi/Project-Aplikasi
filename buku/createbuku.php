@@ -2,21 +2,17 @@
 include "../layout/header.php";
 ?>
 
-<div class="layout-wrapper layout-content-navbar">
-    <div class="layout-container">
+<div class="container-scroller">
+    <?php
+    include "../layout/sidebar.php";
+    ?>
+  <div class="container-fluid page-body-wrapper">
 
-        <?php
-
-        include "../layout/sidebar.php";
-
-        ?>
-
-        <div class="layout-page">
-
-            <?php include "../layout/navbar.php"; ?>
-
-            <div class="container">
-
+    <?php
+    include "../layout/navbar.php";
+    ?>
+    <div class="main-panel">
+        <div class="content-wrapper">
                 <div class="card p-5 mt-5">
                     <h4 class="mt-3 mb-3">Buku</h4>
 

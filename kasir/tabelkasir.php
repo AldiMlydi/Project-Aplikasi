@@ -21,7 +21,7 @@ include '../layout/header.php';
     <div class="main-panel">
     <div class="row">
       <div class="col-12">
-        <a href="kasir/kasir.php" class="btn btn-primary">TAMBAH</a>
+        <a href="createkasir.php" class="btn btn-primary">TAMBAH</a>
         <div class="card">
           <table class="table">
             <thead>
@@ -67,8 +67,8 @@ include '../layout/header.php';
                     <?= $row["akses"] ?>
                   </td>
                   <td>
-                    <a href="Kasir/edit.php?id=<?= $row['id_kasir']; ?>" class="btn btn-primary">Edit</a>
-                    <a href="kasir/delete.php?id=<?= $row['id_kasir']; ?>" class="btn btn-danger">Delete</a>
+                    <a href="kasir/edit.php?id=<?= $row['id_kasir']; ?>" class="btn btn-primary">Edit</a>
+                    <a href="/kasir/deletekasir.php?id=<?= $row['id_kasir']; ?>" class="btn btn-danger">Delete</a>
                   </td>
                   </td>
                 </tr>
@@ -88,5 +88,5 @@ include '../layout/header.php';
 </div>
 </div>
 <?php
-include 'layout/footer.php';
+include '../layout/footer.php';
 ?>

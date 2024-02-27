@@ -1,3 +1,19 @@
+<?php
+session_start();
+include "config-db.php";
+if (isset($_POST["submit"])){
+$sql = "INSERT INTO kasir (nama,username,password) VALUES(
+  '".$_POST["nama"]."',
+  '".$_POST["username"]."',
+  '".$_POST["password"]."'
+)";
+$database->query($sql);
+$_SESSION["login"]=$_POST["username"];
+header("location:login.php");
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,18 +42,18 @@
             <div class="card col-lg-4 mx-auto">
               <div class="card-body px-5 py-5">
                 <h3 class="card-title text-left mb-3">Register</h3>
-                <form>
+                <form method="post">
                   <div class="form-group">
-                    <label>Username</label>
-                    <input type="text" class="form-control p_input">
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nanma" name="nama" class="form-control p_input">
                   </div>
                   <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" class="form-control p_input">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" class="form-control p_input">
                   </div>
                   <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control p_input">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control p_input">
                   </div>
                   <div class="form-group d-flex align-items-center justify-content-between">
                     <div class="form-check">
@@ -47,7 +63,7 @@
                     <a href="#" class="forgot-pass">Forgot password</a>
                   </div>
                   <div class="text-center">
-                    <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+                    <button type="submit" name="submit" class="btn btn-primary btn-block enter-btn">Login</button>
                   </div>
                   <div class="d-flex">
                     <button class="btn btn-facebook col mr-2">

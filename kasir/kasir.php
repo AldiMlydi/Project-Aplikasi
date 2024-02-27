@@ -12,5 +12,5 @@ $data = "INSERT INTO kasir(nama,alamat,telepon,status,username,password,akses) V
 )";
  
 $database->query($data);
-Header("Location../tabelkasir.php")
+Header("location../tabelkasir.php")
 ?>
